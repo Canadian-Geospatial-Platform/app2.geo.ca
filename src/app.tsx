@@ -1,5 +1,5 @@
 import { RenderMap } from "./components/map/render-map";
-import { Map } from "./components/map/map";
+import { MainMap } from "./components/map/main-map";
 import { TypeWindow } from "geoview-core-types";
 import Header from "./components/header/header";
 import MetaDataPage from "./components/search/metadatapage";
@@ -8,26 +8,26 @@ const w = window as TypeWindow;
 
 export const cgpv = w["cgpv"];
 const showMap = () => {
-  if (window.location.pathname === "/") {
-    return <Map />;
-  }
+    if (window.location.pathname === "/") {
+        return <MainMap />;
+    }
 };
 const showMetaData = () => {
-  if (window.location.pathname === "/result") {
-    return <MetaDataPage />;
-  }
+    if (window.location.pathname === "/result") {
+        return <MetaDataPage />;
+    }
 };
 const showRampView = () => {
-  if (window.location.pathname === "/map") {
-    return <RampViewer />;
-  }
+    if (window.location.pathname === "/map") {
+        return <RampViewer />;
+    }
 };
 export const App = () => {
-  return (
-    <div>
-      {showMap()}
-      {showMetaData()}
-      {showRampView()}
-    </div>
-  );
+    return (
+        <div>
+            {showMap()}
+            {showMetaData()}
+            {showRampView()}
+        </div>
+    );
 };

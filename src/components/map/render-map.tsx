@@ -1,15 +1,15 @@
 import Header from "../header/header";
-import { Map } from "./map";
+import { Map } from "./main-map";
 
 export function RenderMap(): JSX.Element {
-  return (
-    <>
-      <Header />
-      <div className="mapPage">
-        <div className="mapContainer">
-          <Map />
-        </div>
-      </div>
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <div className="mapPage">
+                <div className="mapContainer">
+                    <Map />
+                </div>
+            </div>
+        </>
+    );
 }
